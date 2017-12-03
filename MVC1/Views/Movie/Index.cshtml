@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MVC1.Models.Movie>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table class="table-bordered">
+            <thead>Movies</thead>
+            <tbody>
+                @foreach (var movie in @Model)
+                {
+                    <tr>
+                        <td>@movie.Name</td>
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

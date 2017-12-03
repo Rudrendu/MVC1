@@ -25,5 +25,19 @@ namespace MVC1.Controllers
             return Content(content);
             
         }
+
+        public ActionResult Index()
+        {
+
+            return View(GetMovie());
+        }
+
+        private IEnumerable<Movie> GetMovie()
+        {
+            List<Movie> Movies = new List<Movie>();
+            Movies.Add(new Movie { ID = 1, Name = "Amazon ovizan" });
+            Movies.Add(new Movie { ID=2,Name = "Chander Pahar"});
+            return Movies;
+        }
     }
 }
