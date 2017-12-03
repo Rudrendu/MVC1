@@ -1,8 +1,9 @@
 ﻿@model MVC1.Models.Movie
 @{
     ViewBag.Title = "Random";
-    Layout = "~/Views/Shared/_Layout.cshtml"; 
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>@Model.Name</h2>
-
+<h2>@(((MVC1.Models.Movie)ViewData["Movie"]).Name)</h2>
+<h2>@ViewBag.Movie.Name</h2>

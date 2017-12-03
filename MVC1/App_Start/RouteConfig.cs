@@ -13,6 +13,16 @@ namespace MVC1
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapMvcAttributeRoutes();
+
+            routes.MapRoute(
+                name: "Random",
+                url: "Movie/RandomMovie/{moviename}/{ReleaseYear}",
+                defaults: new { controller = "Movie", action = "RandomMovie", moviename = "ABCD2", ReleaseYear = "2015" }
+                //constraints: new { ReleaseYear = @"\d{4}" }
+                // namespace= "MVC1.Controllers")
+                );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
